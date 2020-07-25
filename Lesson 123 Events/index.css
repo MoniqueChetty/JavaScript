@@ -1,0 +1,12 @@
+button {
+    z-index: 10;
+    width: 200px;
+    height: 80px;
+    margin: 100px;
+}
+
+header div {
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+}

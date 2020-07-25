@@ -1,0 +1,20 @@
+#countdown {
+    font-size: 650px;
+    z-index: 10;
+}
+
+#countdown-div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bg-image {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}

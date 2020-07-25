@@ -1,73 +1,40 @@
-//108 Arrays
+//110 Loops For and While
 
-var mFriends = ['Ann', 'Sam', 'John', 'Peter', 'Ivan', 'James', 'Tom'];
-console.log(mFriends);
-console.log(typeof(mFriends));
 
-console.log(mFriends[2]);
-console.log(mFriends[5]);
-console.log(mFriends[10]);
 
-// Update
-mFriends[0] = "Anny";
-console.log(mFriends);
+var mValue = 0;
+while (mValue <= 50) {
+    mValue++;
+    if (mValue % 2) {
+        console.log("Value: " + mValue);
+    }
 
-//Add
-mFriends[8] = "Jesse";
-console.log(mFriends);
+}
+console.log(`Value: outside loop ${mValue}`);
 
-mFriends[mFriends.length] = "Keeno";
-console.log(mFriends);
 
-mFriends.push("Maison");
-console.log(mFriends);
+console.clear()
 
-//Delete
-var mName = mFriends.pop();
-console.log(mName);
-console.log(mFriends);
-var mName = mFriends.pop();
-console.log(mName);
-console.log(mFriends);
-var mName = mFriends.pop();
-console.log(mName);
-console.log(mFriends);
-var mName = mFriends.pop();
-console.log(mName);
-console.log(mFriends);
+for (var i = 0; i < 10; i++) {
+    console.log("Number: " + i);
+}
 
-console.clear();
-
-//109 Arrays2
-
-var mFriends2 = ['Ann', 'Sam', 'John', 'Peter', 'Ivan', 'James', 'Tom'];
-mFriends2.splice(3, 0, "Andy", "Sandy");
-
-//1st  - start position
-//2nd - how many to delete
-//3rd, 4th..... - items to add
-console.log(mFriends2);
-
-//From 0 delete 1 add Bill and Maison
-mFriends2.splice(0, 1, "Bill", "Maison");
-console.log(mFriends2);
-
-//From 0 delete 1 
-mFriends2.splice(3, 2);
-console.log(mFriends2);
-
-console.clear();
-// Concatenation
-
-var officeFriends = ["Tracy", " Steven", "Kathy", "Jannine"]
-
-var allFriends = mFriends2.concat(officeFriends);
-
-console.log(mFriends2)
-console.log(officeFriends)
-console.log(allFriends);
-
-// Sort
-console.log(allFriends.sort());
-console.log(allFriends);
-console.log(allFriends.reverse());
+var mList = [1, 2, 3, 4, 5];
+for (var i = 0; i < mList.length; i++) {
+    console.log("1 Position => " + i + " List Value => " + mList[i]);
+}
+var mList = [1, 2, 3, 4, 5];
+for (var i = 0; i < mList.length; i++) {
+    if (i >= 3) break;
+    console.log("2 Position => " + i + " List Value => " + mList[i]);
+}
+var mList = [1, 2, 3, 4, 5];
+for (var i = 0; i < mList.length; i++) {
+    if (i % 2 !== 0) continue;
+    console.log("3 Position => " + i + " List Value => " + mList[i]);
+}
+var mList = [1, 2, 3, 4, 5];
+for (var i = 0; i < mList.length; i++) {
+    if (i % 2 == 0) continue;
+    console.log("4 Position => " + i + " List Value => " + mList[i]);
+}
