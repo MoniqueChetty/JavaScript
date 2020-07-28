@@ -1,0 +1,33 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div {
+    background-color: orange;
+    padding: 10px;
+    margin: 10px;
+}
+
+h3 {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+p {
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+}
