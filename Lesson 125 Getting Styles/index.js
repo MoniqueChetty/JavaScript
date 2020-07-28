@@ -1,39 +1,29 @@
 console.log('JS Loaded')
 
-// selectedElement.classList.add('MyClass');
 var mainHeading = document.getElementById("main-heading");
-var btn = document.getElementById('btn-click');
-var sidebar = document.getElementById('sidebar');
-var toggleIcon = document.getElementById('toggle-icon');
+var btnIncreaseFont = document.getElementById("font-increase");
+var btnDecreaseFont = document.getElementById("font-decrease");
 
-// var removeF = function() { mainHeading.classList.remove('big'); }
+// console.log(window.getComputedStyle(btnDecreaseFont).marginRight);
+// console.log(window.getComputedStyle(btnDecreaseFont).textDecoration);
+// console.log(btnIncreaseFont.style.marginRight);
 
-var showHide = function() {
-    if (sidebar.classList.contains('show')) {
-        sidebar.classList.remove('show');
-        sidebar.classList.add('hide');
-    } else {
-        sidebar.classList.add('show');
-        sidebar.classList.remove('hide');
-    }
+var initialFontSize = window.getComputedStyle(mainHeading).fontSize;
+console.log(initialFontSize);
+initialFontSize = parseInt(initialFontSize.substr(0, (initialFontSize.length - 2)));
+
+//option1
+btnIncreaseFont.onclick = function() {
+    initialFontSize += 20;
+    console.log(initialFontSize);
+    mainHeading.style.fontSize = initialFontSize + "px";
 }
 
-var smallLarge = function() {
-    sidebar.classList.remove('show');
-    sidebar.classList.add('hide');
-    if (mainHeading.classList.contains('small')) {
-        mainHeading.classList.remove('small');
-        mainHeading.classList.add('big');
-    } else {
-        mainHeading.classList.remove('big');
-        mainHeading.classList.add('small');
-    }
+//option2
+var decrease = function() {
+    initialFontSize -= 20;
+    console.log(initialFontSize);
+    mainHeading.style.fontSize = initialFontSize + "px";
 }
 
-
-btn.addEventListener('click', smallLarge);
-
-toggleIcon.addEventListener('click', showHide);
-
-
-// setTimeout(removeF, 1500);
+btnDecreaseFont.addEventListener('click', decrease);
