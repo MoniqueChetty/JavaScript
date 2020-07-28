@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+
+section:nth-last-of-type() {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+li {
+    background-color: white;
+    margin: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+button {
+    width: 150px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+input {
+    width: 150px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
