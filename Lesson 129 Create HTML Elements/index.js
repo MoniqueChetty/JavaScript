@@ -24,16 +24,31 @@ btnFirst.addEventListener('click', function() {
     var first = list.firstElementChild;
     list.insertBefore(newListElement, first);
 });
-btnTask.addEventListener('click', function() {
-    var newListElement = document.createElement('li');
-    var input = document.getElementById('task').value;
-    input = input[0].toUpperCase() + input.slice(1).toLowerCase();
-    var textNode = document.createTextNode(input);
-    newListElement.appendChild(textNode);
-    newListElement.id = 'item' + (list.childElementCount + 1);
-    console.log(newListElement);
 
+var input = document.getElementById('task');
 
-    list.appendChild(newListElement);
-
+input.addEventListener('keyup', function(e) {
+    if (e.keyCode === 13) {
+        addListItem();
+    }
 });
+
+btnTask.addEventListener('click', addListItem);
+
+function addListItem() {
+    var newListElement = document.createElement('li');
+    input = document.getElementById('task').value;
+    if (input !== undefined && input !== null && input !== '') {
+        input = input[0].toUpperCase() + input.slice(1).toLowerCase();
+        var textNode = document.createTextNode(input);
+        newListElement.appendChild(textNode);
+        newListElement.id = 'item' + (list.childElementCount + 1);
+        console.log(newListElement);
+
+        list.appendChild(newListElement);
+
+    } else {
+        alert('Enter valid Value');
+    }
+    document.getElementById('task').value = '';
+}
