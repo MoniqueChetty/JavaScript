@@ -6,7 +6,7 @@ var input = document.getElementById('task');
 var deleteIcon = document.getElementsByClassName('fa-trash')[0];
 var li = document.getElementsByTagName('li');
 var listSection = document.getElementById('listSection');
-var listSectionChild = document.querySelector('#listSection i');
+var listSectionChild = document.querySelector('#listSection li');
 // var deleteIconList = document.querySelectorAll('fa-trash');
 
 //btnAddItem add item to list with enter button
@@ -25,40 +25,20 @@ btnUpdate.addEventListener('click', updateFirst);
 btnRemove.addEventListener('click', removeItem);
 
 //Remove with icon
-var items = document.querySelectorAll("#todo-list i"),
+var items = document.querySelectorAll("#todo-list li"),
     tab = [],
-    iIndex;
+    liIndex;
 
-
-function deleteItem() {
-    items = document.querySelectorAll("#todo-list i"),
-        tab = [],
-        iIndex;
-    for (let i = 0; i < items.length; i++) {
-        tab.push(items[i].innerHTML)
-            // console.log(tab);
-    }
-    for (let i = 0; i < items.length; i++) {
-        items[i].onclick = function() {
-            iIndex = tab.indexOf(this.innerHTML)
-                // console.log(this.innerHTML + " Index = " + liIndex);
-            list.removeChild(i[liIndex]);
-        }
-    }
-}
-
-//first time to populate list
-// listSection.addEventListener('mouseover', function() {
-//     deleteItem();
-// });
+// first time to populate list
+listSection.addEventListener('mouseover', function() {
+    deleteItem();
+});
 
 // onclick to delete item
 listSectionChild.addEventListener('click', function() {
     console.log('child')
     deleteItem();
 });
-
-
 
 function addListItem() {
     var newListElement2 = createNewNode();
@@ -91,8 +71,6 @@ function removeItem() {
     }
 }
 
-
-
 function createNewNode() {
     var newListElement = document.createElement('li');
     input = document.getElementById('task').value;
@@ -109,4 +87,21 @@ function createNewNode() {
         alert('Enter valid Value');
     }
     document.setElementById('task').value = '';
+}
+
+function deleteItem() {
+    items = document.querySelectorAll("#todo-list li"),
+        tab = [],
+        liIndex;
+    for (let i = 0; i < items.length; i++) {
+        tab.push(items[i].innerHTML)
+            // console.log(tab);
+    }
+    for (let i = 0; i < items.length; i++) {
+        items[i].onclick = function() {
+            liIndex = tab.indexOf(this.innerHTML)
+                // console.log(this.innerHTML + " Index = " + liIndex);
+            list.removeChild(li[liIndex]);
+        }
+    }
 }
