@@ -32,4 +32,6 @@ input {
     margin: 10px;
     border-radius: 10px;
     text-align: center;
+    outline: none;
+    border: 0px;
 }
