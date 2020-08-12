@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Smart Watch</title>
+    <link rel="stylesheet" href="/index.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
-<body>
-    <header>
+<body onload="startTime()">
+
+    <div id="grid-container">
         <div id="header">
             <img id="amazon-logo" src="/assets/amazon logo.png" alt="Amazon Logo">
         </div>
-    </header>
-    <main>
-        <section id="watch">
-            <img id="watch-img" src="https://i.imgur.com/xSIK4M8.png" alt="watch">
-        </section>
-        <section id="details">
-            <div id="item-name">
-                <h2>FitBit 19 - The Smartest Watch</h2>
-                <p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
-            </div>
-            <div>
-                <h4>Select Color</h4>
-                <div id="select-colour">
-                    <div id="black" class="colour"></div>
-                    <div id="red" class="colour"></div>
-                    <div id="blue" class="colour"></div>
-                    <div id="purple" class="colour"></div>
+        <div id="center">
+            <div id="sidebar">
+                <div id="watch-img">
+                    <div id="timer"></div>
+                    <div id="heartRate">
+                        <i id="heart" class="fa fa-heartbeat"></i>
+                        <p id="rate">72</p>
+                    </div>
+                    <img id="watch" src="https://i.imgur.com/xSIK4M8.png" alt="watch">
                 </div>
             </div>
-            <div id="features">
-                <h4>Features</h4>
-                <div>
-                    <button id="time" class="btn">Time</button>
-                    <button id="heart-rate" class="btn">Heart Rate</button>
-                </div>
-            </div>
-            <div>
-                <button id="buy-now">BUY NOW</button>
-            </div>
-        </section>
-    </main>
 
+            <div id="main">
+                <div id="details">
+                    <div id="item-name">
+                        <h2>FitBit 19 - The Smartest Watch</h2>
+                        <p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+                    </div>
+                    <div>
+                        <h4>Select Color</h4>
+                        <div id="select-colour">
+                            <div id="black" class="colour">B</div>
+                            <div id="red" class="colour">R</div>
+                            <div id="blue" class="colour">BL</div>
+                            <div id="purple" class="colour">P</div>
+                        </div>
+                    </div>
+                    <div id="features">
+
+                        <h4>Features</h4>
+                        <button id="time" class="btn">Time</button>
+                        <button id="heart-rate" class="btn">Heart Rate</button>
+
+                    </div>
+                    <div>
+                        <button id="buy-now">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">Copyright by Monique </div>
+    </div>
     <script src="/index.js"></script>
 </body>
 
