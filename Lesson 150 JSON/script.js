@@ -36,3 +36,5 @@ console.log(mArr[2].name + " age " + mArr[2].age);
 var strJson = JSON.stringify(mObj)
 console.log(strJson);
 console.log(JSON.parse(strJson));
+
+//node script.js
